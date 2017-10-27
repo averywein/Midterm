@@ -1,0 +1,8 @@
+<p> The American political system is dominated by two political parties, one of them is called:
+{% if x == 'democrat' %}
+				{{ x }}
+{% elif x == 'republican' %}
+				{{ x }}
+{% else %}
+ <p> ERROR: you have entered an invalid party </p>
+{% endif %}
