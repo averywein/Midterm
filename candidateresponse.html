@@ -1,0 +1,33 @@
+ {% set candidates2008 = ['Barack Obama', 'John Mccain', 'Ralph Nader', 'Bob Barr'] %}
+ {% set candidates2012 = ['Barack Obama', 'Mitt Romney', 'Gary Johnson', 'Jill Stein'] %}
+ {% set candidates2016 = ['Hillary Clinton', 'Donald Trump', 'Gary Johnson', 'Jill Stein'] %}
+<p> The candidates for the {{x}} presidential election were: </p>
+{% if x == '2008' %}
+	<ul>
+		{% for candidates in candidates2008 %}
+			<li>
+				{{ candidates }}
+			</li>
+		{% endfor %}
+	</ul>
+{% elif x == '2012' %}
+	<ul>
+		{% for candidates in candidates2012 %}
+			<li>
+				{{ candidates }}
+			</li>
+		{% endfor %}
+	</ul>
+{% elif x == '2016' %}
+	<ul>
+		{% for candidates in candidates2016 %}
+			<li>
+				{{ candidates }}
+			</li>
+		{% endfor %}
+	</ul>
+{% else %}
+ <p> You have entered an invalid year. </p>
+{% endif %}
+
+ <img src="static/president.jpg">
